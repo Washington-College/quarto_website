@@ -1,7 +1,6 @@
 {
   "name": "Intro to Data Science Portfolio - Quarto & R",
-  "image": "ghcr.io/mcanouil/quarto-codespaces:latest",
-  "remoteUser": "vscode",
+  "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
       "version": "release"
