@@ -1,6 +1,6 @@
 # Student Portfolio Website - Setup Guide
 
-Welcome to your Data Ethics and Practicum portfolio project! This guide will help you set up your personal website using Quarto and deploy it to GitHub Pages.
+Welcome to your Intro to Data Science Portfolio project! This guide will help you set up your personal website using Quarto and deploy it to GitHub Pages.
 
 ## 📚 Table of Contents
 
@@ -15,7 +15,7 @@ Welcome to your Data Ethics and Practicum portfolio project! This guide will hel
 
 ## 🚀 Getting Started
 
-### Step 1: Accept the GitHub Classroom Assignment
+### Step 1: Accept the Classmoji Assignment
 
 1. Click on the assignment link provided by Dr. Poulsen
 2. Accept the assignment - GitHub will create a personal repository for you
