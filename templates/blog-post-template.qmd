@@ -1,98 +1,75 @@
 ---
-title: "Your Blog Post Title"
-author: "Your Name"
-date: "2026-01-15"  # Update with today's date
-categories: [category1, category2, category3]  # Choose relevant categories
+title: "[Your Blog Post Title]"
+author: "[Your Name]"
+date: "2026-01-15"  # Update with publication date (YYYY-MM-DD)
+categories: [R, tidyverse, data analysis, visualization]  # Choose relevant categories
 image: "image.jpg"  # Optional: add a cover image
-draft: false  # Set to true to hide from the blog until ready
+draft: false  # Set to true to hide from the blog until ready to publish
 ---
 
-## Introduction
+## Introduction & Question
 
-Start with a brief introduction. What is this post about? Why is it important or interesting?
+[Start with a clear hook and motivation. What question are you investigating? Why is this dataset or topic interesting or important to explore?]
 
-## Background
+## Background & Data
 
-Provide any necessary context. What concepts should readers understand before diving in?
+[Describe the dataset and any context readers should know. Where does the data come from? What are the key variables?]
 
-## Main Content
+## Analysis & Visualizations
 
-This is where your main content goes. Break it into logical sections with clear headings.
+[Use code chunks with R and the tidyverse to wrangle data and build visualizations. Explain your thought process before and after each code block.]
 
-### Code Example
-
-Show your work with code blocks:
-
-```{python}
+```{r}
+#| label: analysis-chunk
 #| echo: true
 #| code-fold: false
 #| warning: false
+#| message: false
 
-import pandas as pd
-import matplotlib.pyplot as plt
+library(tidyverse)
 
-# Your code here
-data = pd.DataFrame({
-    'x': [1, 2, 3, 4, 5],
-    'y': [2, 4, 6, 8, 10]
-})
+# Load your data or create an example tibble
+my_data <- tibble(
+  x = c(1, 2, 3, 4, 5),
+  y = c(10, 25, 20, 35, 30)
+)
 
-plt.figure(figsize=(8, 5))
-plt.plot(data['x'], data['y'], marker='o')
-plt.title('Your Plot Title')
-plt.xlabel('X Label')
-plt.ylabel('Y Label')
-plt.grid(True, alpha=0.3)
-plt.show()
+# Plot your findings with ggplot2
+ggplot(my_data, aes(x = x, y = y)) +
+  geom_point(color = "#2c3e50", size = 3) +
+  geom_line(color = "#3498db", linewidth = 1) +
+  labs(
+    title = "Plot Title Describing Key Insight",
+    subtitle = "Analysis using tidyverse in R",
+    x = "X Variable",
+    y = "Y Variable"
+  ) +
+  theme_minimal()
 ```
 
-### Analysis
+## Key Findings
 
-Explain what your code does and what the results mean:
+[Summarize the main takeaways from your analysis:]
 
-- **Key Finding 1**: Explain your first observation
-- **Key Finding 2**: Explain your second observation
-- **Key Finding 3**: Explain your third observation
+- **Finding 1:** [Detail your first key observation]
+- **Finding 2:** [Detail your second key observation]
+- **Finding 3:** [Detail your third key observation]
 
-## Ethical Considerations
+## Learning Out Loud: Challenges & Problem Solving
 
-For a data ethics class, consider including:
-
-- What ethical issues does this project raise?
-- Who might be affected by this work?
-- What are the potential risks or benefits?
-- How did you address ethical concerns?
-
-## Challenges and Solutions
-
-What difficulties did you encounter? How did you overcome them?
+[Document what was challenging about this assignment or analysis. What error messages or roadblocks did you encounter? How did you solve or debug them?]
 
 ::: {.callout-tip}
-## Tip
-Share a helpful tip or insight you learned while working on this project.
+## Insight / Tip
+[Share a helpful trick, function, or concept you learned while working on this analysis (e.g., how to use a specific dplyr verb or ggplot aesthetic).]
 :::
 
-## Conclusion
+## Conclusion & Next Questions
 
-Summarize your main points. What did you learn? What's next?
+[Wrap up your post. What did you conclude? What questions remain open, or what would you explore if you had more data or time?]
 
-## References
+## References & Data Sources
 
-If you used external sources, cite them here:
+[Cite any datasets, documentation, or external resources you referenced:]
 
-1. Author Name. (Year). *Title*. URL
-2. Another Source. (Year). *Title*. URL
-
----
-
-## Discussion Questions
-
-Consider ending with questions for reflection:
-
-1. Question 1?
-2. Question 2?
-3. Question 3?
-
----
-
-*Tags: #DataEthics #DataScience #Python #Analysis*
+1. Author/Source Name. (Year). *Title of Dataset or Article*. [URL](https://example.com)

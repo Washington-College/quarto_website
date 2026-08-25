@@ -1,26 +1,19 @@
 # Quarto Website Files
 .quarto/
 /_site/
-/docs/
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.Python
-.venv/
-env/
-venv/
-ENV/
-.ipynb_checkpoints/
-
-# R
+# R files
 .Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
 *.Rproj
 renv/
+
+# Python files (if any scratch)
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
 
 # OS files
 .DS_Store
@@ -32,3 +25,6 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+/.quarto/
+**/*.quarto_ipynb

@@ -4,7 +4,7 @@ title: "Resume"
 
 ## Your Name
 
-[youremail@example.com](mailto:youremail@example.com) | [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+[youremail@washcoll.edu](mailto:youremail@washcoll.edu) | [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
 
 ---
 
@@ -13,61 +13,51 @@ title: "Resume"
 **Washington College** | Chestertown, MD  
 *Bachelor of Arts/Science in [Your Major]* | Expected Graduation: [Year]
 
-- Relevant Coursework: Data Ethics and Practicum, [Other Courses]
-- GPA: [Your GPA]
+- **Relevant Coursework:** Intro to Data Science, [Other Courses, e.g., Applied Statistics, Calculus]
+- **GPA:** [Your GPA / Optional]
 
 ---
 
-## Skills
+## Technical Skills
 
-**Programming Languages:** Python, R, SQL  
-**Data Tools:** Pandas, NumPy, Matplotlib, Seaborn, ggplot2  
-**Technologies:** Git, Jupyter, Quarto, GitHub  
-**Other:** Data Analysis, Data Visualization, Statistical Modeling
+- **Programming & Tools:** R, RStudio, Quarto, Git, GitHub
+- **R & Tidyverse Packages:** `ggplot2`, `dplyr`, `tidyr`, `readr`, `tibble`, `purrr`, `stringr`, `forcats`
+- **Data Competencies:** Exploratory Data Analysis (EDA), Data Cleaning & Wrangling, Data Visualization, Reproducible Reporting, Statistical Summaries
 
 ---
 
-## Projects
+## Projects & Portfolio Pieces
 
-### Project Title 1
-*[Date Range]*
+### Project Title 1 (e.g., Exploratory Data Analysis of [Dataset])
+*[Date / Course Term]*
 
-- Brief description of what you did
-- Technologies used: Python, Pandas, Matplotlib
-- Key achievements or outcomes
+- Conducted exploratory data analysis on [dataset description] using R and the tidyverse.
+- Cleaned and reshaped raw data using `dplyr` and `tidyr` to prepare tidy data frames for analysis.
+- Generated publication-ready data visualizations using `ggplot2` to communicate key findings.
 
-### Project Title 2
-*[Date Range]*
+### Project Title 2 (e.g., Data Visualization & Storytelling)
+*[Date / Course Term]*
 
-- Brief description of what you did
-- Technologies used: R, ggplot2, dplyr
-- Key achievements or outcomes
+- Analyzed trends in [topic/data] and created reproducible reports in Quarto.
+- Documented findings, insights, and code methodology through learning-out-loud blog posts.
 
 ---
 
 ## Experience
 
 ### Position Title
-*Organization Name | Location | [Date Range]*
+*Organization / Department | Location | [Date Range]*
 
 - Describe your responsibilities and achievements
+- Highlight analytical thinking, research, problem solving, or technical workflows
 - Quantify results when possible
-- Focus on data-related work
-
-### Position Title
-*Organization Name | Location | [Date Range]*
-
-- Describe your responsibilities and achievements
-- Quantify results when possible
-- Focus on data-related work
 
 ---
 
 ## Activities & Leadership
 
-- List relevant clubs, organizations, or volunteer work
-- Include leadership positions
-- Highlight any data or tech-related activities
+- List relevant campus clubs, student organizations, sports, or volunteer work
+- Highlight any leadership roles, tutoring, or collaborative projects
 
 ---
 

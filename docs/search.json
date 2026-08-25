@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "posts/first-post/index.html",
+    "href": "posts/first-post/index.html",
+    "title": "My First Data Science Post",
+    "section": "",
+    "text": "[Write your introduction here! Welcome readers to your first post and explain what question or dataset you are exploring today.]"
+  },
+  {
+    "objectID": "posts/first-post/index.html#introduction",
+    "href": "posts/first-post/index.html#introduction",
+    "title": "My First Data Science Post",
+    "section": "",
+    "text": "[Write your introduction here! Welcome readers to your first post and explain what question or dataset you are exploring today.]"
+  },
+  {
+    "objectID": "posts/first-post/index.html#what-im-learning",
+    "href": "posts/first-post/index.html#what-im-learning",
+    "title": "My First Data Science Post",
+    "section": "What I’m Learning",
+    "text": "What I’m Learning\n[Share what you’ve learned so far in Intro to Data Science. For example, explain a new concept, a package you tried, or an interesting challenge you encountered.]\n\nKey Takeaway 1: [Explain your first takeaway or observation]\nKey Takeaway 2: [Explain your second takeaway or observation]\nKey Takeaway 3: [Explain your third takeaway or observation]"
+  },
+  {
+    "objectID": "posts/first-post/index.html#code-example-exploring-data-with-r-tidyverse",
+    "href": "posts/first-post/index.html#code-example-exploring-data-with-r-tidyverse",
+    "title": "My First Data Science Post",
+    "section": "Code Example: Exploring Data with R & Tidyverse",
+    "text": "Code Example: Exploring Data with R & Tidyverse\nHere is an example code chunk demonstrating how to create a data visualization using ggplot2 in R:\n\nlibrary(tidyverse)\n\n# Sample dataset: replace with your own data or course dataset\nsample_data &lt;- tibble(\n  x = c(1, 2, 3, 4, 5),\n  y = c(2, 4, 7, 9, 12),\n  category = c(\"A\", \"A\", \"B\", \"B\", \"B\")\n)\n\n# Create a plot using ggplot2\nggplot(sample_data, aes(x = x, y = y, color = category)) +\n  geom_point(size = 3) +\n  geom_line(linewidth = 1) +\n  labs(\n    title = \"My First ggplot Visualization\",\n    subtitle = \"Created with R & the tidyverse\",\n    x = \"Independent Variable (X)\",\n    y = \"Dependent Variable (Y)\",\n    color = \"Group\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "posts/first-post/index.html#discussion-reflection",
+    "href": "posts/first-post/index.html#discussion-reflection",
+    "title": "My First Data Science Post",
+    "section": "Discussion & Reflection",
+    "text": "Discussion & Reflection\n[Reflect on your code and visualization above. What insights does the graph show? What questions does it raise, or what would you like to try next?]"
+  },
+  {
+    "objectID": "posts/first-post/index.html#next-steps",
+    "href": "posts/first-post/index.html#next-steps",
+    "title": "My First Data Science Post",
+    "section": "Next Steps",
+    "text": "Next Steps\n[Outline what you plan to explore next in your data science learning journey.]"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "youremail@washcoll.edu | GitHub | LinkedIn"
+  },
+  {
+    "objectID": "resume.html#your-name",
+    "href": "resume.html#your-name",
+    "title": "Resume",
+    "section": "",
+    "text": "youremail@washcoll.edu | GitHub | LinkedIn"
+  },
+  {
+    "objectID": "resume.html#education",
+    "href": "resume.html#education",
+    "title": "Resume",
+    "section": "Education",
+    "text": "Education\nWashington College | Chestertown, MD\nBachelor of Arts/Science in [Your Major] | Expected Graduation: [Year]\n\nRelevant Coursework: Intro to Data Science, [Other Courses, e.g., Applied Statistics, Calculus]\nGPA: [Your GPA / Optional]"
+  },
+  {
+    "objectID": "resume.html#technical-skills",
+    "href": "resume.html#technical-skills",
+    "title": "Resume",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nProgramming & Tools: R, RStudio, Quarto, Git, GitHub\nR & Tidyverse Packages: ggplot2, dplyr, tidyr, readr, tibble, purrr, stringr, forcats\nData Competencies: Exploratory Data Analysis (EDA), Data Cleaning & Wrangling, Data Visualization, Reproducible Reporting, Statistical Summaries"
+  },
+  {
+    "objectID": "resume.html#projects-portfolio-pieces",
+    "href": "resume.html#projects-portfolio-pieces",
+    "title": "Resume",
+    "section": "Projects & Portfolio Pieces",
+    "text": "Projects & Portfolio Pieces\n\nProject Title 1 (e.g., Exploratory Data Analysis of [Dataset])\n[Date / Course Term]\n\nConducted exploratory data analysis on [dataset description] using R and the tidyverse.\nCleaned and reshaped raw data using dplyr and tidyr to prepare tidy data frames for analysis.\nGenerated publication-ready data visualizations using ggplot2 to communicate key findings.\n\n\n\nProject Title 2 (e.g., Data Visualization & Storytelling)\n[Date / Course Term]\n\nAnalyzed trends in [topic/data] and created reproducible reports in Quarto.\nDocumented findings, insights, and code methodology through learning-out-loud blog posts."
+  },
+  {
+    "objectID": "resume.html#experience",
+    "href": "resume.html#experience",
+    "title": "Resume",
+    "section": "Experience",
+    "text": "Experience\n\nPosition Title\nOrganization / Department | Location | [Date Range]\n\nDescribe your responsibilities and achievements\nHighlight analytical thinking, research, problem solving, or technical workflows\nQuantify results when possible"
+  },
+  {
+    "objectID": "resume.html#activities-leadership",
+    "href": "resume.html#activities-leadership",
+    "title": "Resume",
+    "section": "Activities & Leadership",
+    "text": "Activities & Leadership\n\nList relevant campus clubs, student organizations, sports, or volunteer work\nHighlight any leadership roles, tutoring, or collaborative projects\n\n\nDownload PDF version: resume.pdf"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my portfolio website for Intro to Data Science at Washington College!\nThis site serves as an open learning portfolio where I “learn out loud”—documenting my exploration of data, sharing data analyses and visualizations built with R and the tidyverse, and presenting course projects."
+  },
+  {
+    "objectID": "index.html#about-this-site",
+    "href": "index.html#about-this-site",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my portfolio website for Intro to Data Science at Washington College!\nThis site serves as an open learning portfolio where I “learn out loud”—documenting my exploration of data, sharing data analyses and visualizations built with R and the tidyverse, and presenting course projects."
+  },
+  {
+    "objectID": "index.html#what-youll-find-here",
+    "href": "index.html#what-youll-find-here",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "What You’ll Find Here",
+    "text": "What You’ll Find Here\n\nBlog: Reflections, data analyses, and learning logs as I explore new data science concepts and tools.\nResume: An overview of my academic background, technical skills, coursework, and projects.\nAbout Me: A brief background about who I am and my academic and professional interests."
+  },
+  {
+    "objectID": "index.html#recent-work",
+    "href": "index.html#recent-work",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "Recent Work",
+    "text": "Recent Work\nCheck out my Blog to read my latest posts and data analyses!\n\nThis site was built using Quarto and deployed with GitHub Pages."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a student at Washington College studying [Your Major]. This portfolio documents my learning journey in Intro to Data Science, featuring hands-on projects, exploratory data analyses, and data visualizations using R and the tidyverse."
+  },
+  {
+    "objectID": "about.html#hello",
+    "href": "about.html#hello",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a student at Washington College studying [Your Major]. This portfolio documents my learning journey in Intro to Data Science, featuring hands-on projects, exploratory data analyses, and data visualizations using R and the tidyverse."
+  },
+  {
+    "objectID": "about.html#academic-data-science-interests",
+    "href": "about.html#academic-data-science-interests",
+    "title": "About Me",
+    "section": "Academic & Data Science Interests",
+    "text": "Academic & Data Science Interests\n\nExploratory Data Analysis & Visualization (ggplot2)\nData Wrangling & Transformation (dplyr, tidyr)\nReproducible Research & Scientific Publishing (Quarto, R Markdown)\n[Your specific interests, e.g., Sports Analytics, Environmental Data, Economics]"
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "Background",
+    "text": "Background\n[Write a brief paragraph about yourself, your academic background, what excites you about working with data, and what you hope to learn or achieve in Intro to Data Science.]"
+  },
+  {
+    "objectID": "about.html#connect-with-me",
+    "href": "about.html#connect-with-me",
+    "title": "About Me",
+    "section": "Connect With Me",
+    "text": "Connect With Me\nFeel free to connect or reach out:\n\nEmail: youremail@washcoll.edu\nGitHub: @yourusername\nLinkedIn: Your LinkedIn Profile"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Data Science Blog",
+    "section": "",
+    "text": "Welcome to my data science blog! Here I document my work as I “learn out loud”—sharing data explorations, problem-solving reflections, and visualizations built using R and the tidyverse for my Intro to Data Science portfolio.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy First Data Science Post\n\n\n\ndata science\n\nR\n\ntidyverse\n\ngetting started\n\n\n\n\n\n\n\n\n\nJan 15, 2026\n\n\n[Your Name]\n\n\n\n\n\nNo matching items"
+  }
+]

@@ -1,21 +1,23 @@
 ---
-title: "Welcome to My Portfolio"
+title: "Welcome to My Data Science Portfolio"
 ---
 
 ## About This Site
 
-Welcome! This is my portfolio website for the Data Ethics and Practicum class at Washington College. Here you'll find my blog posts, projects, and resume.
+Welcome to my portfolio website for **Intro to Data Science** at Washington College! 
+
+This site serves as an open learning portfolio where I "learn out loud"—documenting my exploration of data, sharing data analyses and visualizations built with **R** and the **tidyverse**, and presenting course projects.
+
+## What You'll Find Here
+
+- **[Blog](blog.qmd)**: Reflections, data analyses, and learning logs as I explore new data science concepts and tools.
+- **[Resume](resume.qmd)**: An overview of my academic background, technical skills, coursework, and projects.
+- **[About Me](about.qmd)**: A brief background about who I am and my academic and professional interests.
 
 ## Recent Work
 
-Check out my [Blog](blog.qmd) for the latest posts about data science, ethics, and my practicum projects.
-
-## Quick Links
-
-- [Blog](blog.qmd) - Read my latest posts
-- [Resume](resume.qmd) - View my experience and skills
-- [About](about.qmd) - Learn more about me
+Check out my [Blog](blog.qmd) to read my latest posts and data analyses!
 
 ---
 
-*This site was built using [Quarto](https://quarto.org/), an open-source scientific and technical publishing system.*
+*This site was built using [Quarto](https://quarto.org/) and deployed with GitHub Pages.*

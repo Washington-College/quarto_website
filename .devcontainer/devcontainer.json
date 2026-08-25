@@ -1,5 +1,5 @@
 {
-  "name": "Student Portfolio - Quarto Website",
+  "name": "Intro to Data Science Portfolio - Quarto & R",
   "image": "ghcr.io/mcanouil/quarto-codespaces:latest",
   "remoteUser": "vscode",
   "features": {
@@ -11,15 +11,13 @@
     "vscode": {
       "extensions": [
         "quarto.quarto",
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "ms-toolsai.jupyter",
         "REditorSupport.r"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/python/current/bin/python3"
+        "r.alwaysUseActiveTerminal": true,
+        "r.bracketedPaste": true
       }
     }
   },
-  "postCreateCommand": "bash -c 'python3 -m pip install --user pandas matplotlib numpy seaborn plotly scikit-learn && quarto check'"
+  "postCreateCommand": "bash -c 'Rscript install_packages.R && quarto check'"
 }

@@ -1,355 +1,270 @@
-# Student Portfolio Website - Setup Guide
+# Student Portfolio Website: Setup & Assignment Guide
 
-Welcome to your Intro to Data Science Portfolio project! This guide will help you set up your personal website using Quarto and deploy it to GitHub Pages.
+Welcome to your **Intro to Data Science** Portfolio project! In this course, you will build and maintain a personal website using **Quarto** and **R with the tidyverse**, published online via **GitHub Pages**.
+
+This website will host your blog posts as you **"learn out loud"** throughout the semester—documenting your data analyses, sharing visualizations, reflecting on problem-solving challenges, and producing portfolio pieces that contribute to your course grade.
+
+---
 
 ## 📚 Table of Contents
 
-1. [Getting Started](#getting-started)
-2. [Customizing Your Website](#customizing-your-website)
-3. [Adding Blog Posts](#adding-blog-posts)
-4. [Updating Your Resume](#updating-your-resume)
-5. [Deploying to GitHub Pages](#deploying-to-github-pages)
-6. [Troubleshooting](#troubleshooting)
+1. [Assignment Overview & Learning Out Loud](#assignment-overview--learning-out-loud)
+2. [Getting Started via Classmoji](#getting-started-via-classmoji)
+3. [Environment Setup & Verification](#environment-setup--verification)
+4. [Customizing Your Website Pages](#customizing-your-website-pages)
+5. [Writing Blog Posts with R & Tidyverse](#writing-blog-posts-with-r--tidyverse)
+6. [Deploying Your Site to GitHub Pages](#deploying-your-site-to-github-pages)
+7. [Assignment Requirements & Grading Checklist](#assignment-requirements--grading-checklist)
+8. [Troubleshooting & FAQs](#troubleshooting--faqs)
 
 ---
 
-## 🚀 Getting Started
+## 🌟 Assignment Overview & Learning Out Loud
 
-### Step 1: Accept the Classmoji Assignment
+### Why Build a Portfolio?
+A data science portfolio is more than just homework—it is public evidence of your ability to ask interesting questions, wrangle raw data, build informative visualizations, and clearly communicate your insights.
 
-1. Click on the assignment link provided by Dr. Poulsen
-2. Accept the assignment - GitHub will create a personal repository for you
-3. Wait for the repository to be created (this may take a minute)
-
-### Step 2: Open in Codespaces
-
-1. Go to your newly created repository on GitHub
-2. Click the green **"Code"** button
-3. Select the **"Codespaces"** tab
-4. Click **"Create codespace on main"**
-5. Wait for the Codespace to build (first time may take 3-5 minutes)
-
-The Codespace will automatically:
-- Install Quarto
-- Set up Python and R environments
-- Install VS Code extensions for Quarto
-- Run `quarto check` to verify everything is working
-
-### Step 3: Verify Your Setup
-
-Once the Codespace opens:
-
-1. Wait for the automatic setup to complete (you'll see "Running postCreateCommand..." in the terminal)
-2. Python packages (pandas, matplotlib, etc.) will be installed automatically
-3. Open the terminal (Terminal > New Terminal) if not already open
-4. Verify installation: `python3 -c "import pandas, matplotlib; print('✓ Packages ready!')"`
-5. Check Quarto: `quarto check`
-6. You should see green checkmarks ✓ indicating everything is installed correctly
-
-**Note:** If you need to reinstall packages later, run: `python3 -m pip install --user -r requirements.txt`
+### What is "Learning Out Loud"?
+Learning data science is an iterative process. "Learning out loud" means:
+- Documenting your journey and thought process as you tackle new concepts.
+- Showing your code and how you generated your visualizations with `ggplot2` and `dplyr`.
+- Sharing the roadblocks you hit (e.g., unexpected data types, tricky joins, debugging code) and explaining how you solved them.
+- Asking open questions and proposing next steps for further inquiry.
 
 ---
 
-## 🎨 Customizing Your Website
+## 🚀 Getting Started via Classmoji
 
-### Update Site Information
+### Step 1: Accept the Assignment Link
+1. Click the assignment link provided in **Classmoji** by Dr. Poulsen.
+2. Accept the assignment. GitHub will automatically create a private repository under your GitHub account for this project.
+3. Wait a moment for GitHub to initialize your repository.
 
-1. Open `_quarto.yml`
-2. Change the following:
-   ```yaml
-   title: "My Portfolio"  # Change to your name
-   description: "Data Ethics and Practicum Portfolio"
-   ```
-3. Update the GitHub link in the navbar:
-   ```yaml
-   - icon: github
-     href: https://github.com/yourusername  # Use your GitHub username
-   ```
+### Step 2: Open in GitHub Codespaces
+1. Navigate to your newly created repository on GitHub.
+2. Click the green **Code** button.
+3. Select the **Codespaces** tab.
+4. Click **Create codespace on main**.
+5. Wait for Codespaces to build your cloud container (this takes 2–4 minutes the first time).
 
-### Personalize Your Pages
-
-#### Home Page (`index.qmd`)
-- Open `index.qmd`
-- Edit the welcome message
-- Add information about yourself and your projects
-
-#### About Page (`about.qmd`)
-- Open `about.qmd`
-- Write a brief bio
-- Add your interests and background
-- Update your contact information
-
-#### Resume Page (`resume.qmd`)
-- Open `resume.qmd`
-- Fill in your education, skills, experience, and projects
-- Remove the placeholder text and add your actual information
-
-### Preview Your Website Locally
-
-1. In the terminal, run:
-   ```bash
-   quarto preview
-   ```
-2. A browser preview will open showing your website
-3. As you edit files, the preview will automatically update
-4. Press `Ctrl+C` in the terminal to stop the preview
+The container automatically:
+- Sets up **Quarto CLI**
+- Configures **R** with `knitr`, `rmarkdown`, `tidyverse`, and `httpgd`
+- Installs the Quarto and R VS Code extensions
 
 ---
 
-## 📝 Adding Blog Posts
+## 🔍 Environment Setup & Verification
 
-Blog posts are stored in the `posts/` directory. Each post should be in its own folder.
+Once your Codespace finishes building:
 
-### Create a New Blog Post
-
-1. Create a new folder in `posts/`:
+1. Open the integrated terminal (from the top menu: **Terminal > New Terminal**).
+2. Verify that R and the tidyverse are ready:
    ```bash
-   mkdir posts/my-new-post
+   R -e "library(tidyverse); message('✓ Tidyverse is ready!')"
    ```
-
-2. Create an `index.qmd` file in that folder:
+3. Run the Quarto diagnostic check:
    ```bash
-   touch posts/my-new-post/index.qmd
+   quarto check
    ```
+   You should see green checkmarks `[✓]` for R, Knitr, and Quarto.
 
-3. Add the following template to your new `index.qmd`:
-   ```yaml
-   ---
-   title: "Your Post Title"
-   author: "Your Name"
-   date: "2026-01-15"
-   categories: [data science, python, analysis]
-   ---
+> [!TIP]
+> If any R package is missing or you need to re-install packages, run:
+> ```bash
+> Rscript install_packages.R
+> ```
 
-   ## Introduction
+---
 
-   Your post content goes here...
-   ```
+## 🎨 Customizing Your Website Pages
 
-### Blog Post Tips
+### 1. Update Site Configuration (`_quarto.yml`)
+Open `_quarto.yml` and personalize the site header and navigation:
+```yaml
+website:
+  title: "Jane Doe's Data Science Portfolio"   # Replace with your name
+  description: "Intro to Data Science Portfolio"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Resume"
+        href: resume.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/yourusername  # Your GitHub profile link
+```
 
-- **Use descriptive titles**: Make it clear what the post is about
-- **Add categories**: Help organize your posts by topic
-- **Include code examples**: Use code blocks to show your work
-- **Add images**: Place images in your post folder and reference them
-- **Write regularly**: Aim for at least one post per project or assignment
+### 2. Personalize Core Pages
+- **Home Page (`index.qmd`)**: Update the welcome message to introduce yourself and describe what visitors will find on your site.
+- **About Page (`about.qmd`)**: Add your bio, academic background, data science interests, and contact information.
+- **Resume Page (`resume.qmd`)**: Fill in your education, technical skills (R, tidyverse, Quarto, Git), coursework, and project descriptions. Replace all placeholder brackets `[...]`.
 
-### Example Code Block in a Post
+### 3. Preview Your Website Locally
+To see how your website looks while you edit:
+```bash
+quarto preview
+```
+- Codespaces will open a browser window displaying your live site.
+- Whenever you save changes to a `.qmd` file, the preview updates automatically!
+- To stop the preview server, press `Ctrl + C` in the terminal.
+
+---
+
+## 📝 Writing Blog Posts with R & Tidyverse
+
+All blog posts live inside the `posts/` directory. Each post has its own subfolder containing an `index.qmd` file and optional images.
+
+### Step 1: Create a New Post Folder
+To create a new post, create a descriptive folder name inside `posts/`:
+```bash
+mkdir posts/exploring-penguins
+```
+
+### Step 2: Copy the Starter Template
+Copy the course template into your new post directory:
+```bash
+cp templates/blog-post-template.qmd posts/exploring-penguins/index.qmd
+```
+
+### Step 3: Edit Your Post Frontmatter
+Open `posts/exploring-penguins/index.qmd` and update the YAML frontmatter at the very top:
+```yaml
+---
+title: "Exploring Penguin Physical Traits with ggplot2"
+author: "Your Name"
+date: "2026-02-10"
+categories: [R, tidyverse, ggplot2, EDA]
+image: "image.jpg"
+draft: false
+---
+```
+
+### Step 4: Write Content & Add R Code Chunks
+Write in Markdown and include R code chunks to analyze data and display plots.
 
 ````markdown
-```{{python}}
+## Visualizing Flipper Length vs Body Mass
+
+Here we explore the relationship between flipper length and body mass across penguin species using the tidyverse:
+
+```{{r}}
+#| label: fig-penguins
 #| echo: true
-#| code-fold: false
+#| warning: false
+#| message: false
+#| fig-cap: "Flipper length vs body mass by species"
 
-import pandas as pd
-import matplotlib.pyplot as plt
+library(tidyverse)
 
-# Your code here
+# Example using built-in or loaded data
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  labs(
+    title = "Penguin Size Measurements",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Species"
+  ) +
+  theme_minimal()
 ```
 ````
 
----
-
-## 📄 Updating Your Resume
-
-The `resume.qmd` file contains your resume. Here's how to customize it:
-
-### Structure
-
-1. **Contact Information**: Add your email, GitHub, LinkedIn
-2. **Education**: List your degree and relevant coursework
-3. **Skills**: List programming languages and tools you know
-4. **Projects**: Highlight your best work (including class projects)
-5. **Experience**: Add internships, jobs, or relevant experience
-
-### Tips for a Good Data Science Resume
-
-- **Quantify achievements**: Use numbers when possible
-- **Focus on impact**: What did your work accomplish?
-- **Use action verbs**: "Analyzed", "Developed", "Implemented", etc.
-- **Keep it concise**: 1-2 pages maximum
-- **Update regularly**: Add new projects as you complete them
+### Key R Code Chunk Options
+| Option | What it does | Recommended setting |
+|---|---|---|
+| `#| echo: true` | Displays the R source code | `true` (show your work!) |
+| `#| warning: false` | Hides package warnings from appearing on the page | `false` |
+| `#| message: false` | Hides package startup messages (e.g. tidyverse attach) | `false` |
+| `#| fig-cap: "..."` | Adds a caption below your plot | Descriptive text |
+| `#| code-fold: true` | Makes code collapsible for cleaner reading | Optional |
 
 ---
 
-## 🌐 Deploying to GitHub Pages
+## 🌐 Deploying Your Site to GitHub Pages
 
-Once you're happy with your website, it's time to publish it online!
+Publishing your site makes it visible to the instructor, your peers, and future employers!
 
-### Step 1: Build Your Website
+### Step 1: Render the Website
+In the terminal, run:
+```bash
+quarto render
+```
+This executes all your R code chunks, generates figures, and compiles the website into the `docs/` folder.
 
-1. In the terminal, run:
-   ```bash
-   quarto render
-   ```
-2. This creates a `docs/` folder with your complete website
+### Step 2: Commit and Push to GitHub
+Stage, commit, and push your changes:
+```bash
+git add .
+git commit -m "Update portfolio pages and add new blog post"
+git push origin main
+```
 
-### Step 2: Commit and Push Your Changes
-
-1. Stage all your changes:
-   ```bash
-   git add .
-   ```
-
-2. Commit with a message:
-   ```bash
-   git commit -m "Initial portfolio setup"
-   ```
-
-3. Push to GitHub:
-   ```bash
-   git push origin main
-   ```
-
-### Step 3: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click **"Settings"** (in the repository menu)
-3. Scroll down to **"Pages"** (in the left sidebar under "Code and automation")
-4. Under **"Source"**, select:
+### Step 3: Enable GitHub Pages (One-Time Setup)
+1. Go to your repository on GitHub.
+2. Click **Settings** (gear tab at the top).
+3. In the left navigation menu under **Code and automation**, click **Pages**.
+4. Under **Build and deployment > Source**, select **Deploy from a branch**.
+5. Set:
    - **Branch**: `main`
    - **Folder**: `/docs`
-5. Click **"Save"**
-6. Wait a few minutes for deployment
+6. Click **Save**.
 
-### Step 4: Access Your Website
-
-Your website will be available at:
+### Step 4: Access Your Live Website
+In a few minutes, your site will be live at:
 ```
-https://yourusername.github.io/repository-name/
+https://<your-github-username>.github.io/<your-repository-name>/
 ```
+*(GitHub will display your exact URL at the top of the Pages settings page).*
 
-- Replace `yourusername` with your GitHub username
-- Replace `repository-name` with your repository name
-
-GitHub will show you the exact URL in the Pages settings.
-
-### Step 5: Update Your Website
-
-Whenever you make changes:
-
-1. Edit your files in Codespaces
-2. Run `quarto render` to rebuild the site
-3. Commit and push your changes:
-   ```bash
-   git add .
-   git commit -m "Updated blog post"
-   git push origin main
-   ```
-4. GitHub Pages will automatically update your site (may take 2-5 minutes)
+Whenever you make future updates:
+1. Edit your files.
+2. Run `quarto render`.
+3. Commit and push (`git add .`, `git commit -m "..."`, `git push origin main`).
+4. Your live site will automatically update within 1–2 minutes!
 
 ---
 
-## 🔧 Troubleshooting
+## 🎯 Assignment Requirements & Grading Checklist
 
-### Issue: "No module named 'pandas'" in Jupyter
+Before submitting your repository link for grading, confirm that your site meets all requirements:
 
-**Solution:**
-Install packages using the system Python:
+- [ ] **Site Configuration**: `_quarto.yml` contains your name and working GitHub links.
+- [ ] **Home Page (`index.qmd`)**: Personalized welcome introduction for your Intro to Data Science portfolio.
+- [ ] **About Page (`about.qmd`)**: Complete biography, background, and academic interests.
+- [ ] **Resume Page (`resume.qmd`)**: Detailed education, Intro to Data Science coursework, and R/tidyverse skills.
+- [ ] **Blog Posts**: Contains your authored blog posts in `posts/` documenting your data analyses.
+- [ ] **Working Code & Visualizations**: Code blocks use `{r}` and `tidyverse` packages without rendering errors.
+- [ ] **No Placeholders**: All template brackets `[...]` and dummy filler text have been replaced with your own writing.
+- [ ] **Live Deployment**: Website renders cleanly to `docs/` and is publicly accessible via GitHub Pages.
+
+---
+
+## 🔧 Troubleshooting & FAQs
+
+### Q: How do I fix `Error in library(tidyverse): there is no package called 'tidyverse'`?
+**Solution:** Run the package installer in your terminal:
 ```bash
-/usr/local/python/current/bin/python3 -m pip install -r requirements.txt --user
+Rscript install_packages.R
 ```
 
-Or use this simpler command:
-```bash
-python3 -m pip install --user pandas matplotlib numpy seaborn plotly scikit-learn
-```
-
-After installation:
-1. Stop the preview (Ctrl+C in terminal)
-2. Run `quarto preview` again
-3. The packages should now be available
-
-### Issue: Website isn't updating on GitHub Pages
-
+### Q: `quarto render` fails with an R error in a blog post
 **Solution:**
-- Make sure you ran `quarto render` before pushing
-- Check that the `docs/` folder is included in your commit
-- Wait 5-10 minutes - GitHub Pages can take time to update
-- Clear your browser cache and refresh
+1. Check the error message in the terminal—Quarto will tell you which file and line number failed.
+2. Run `quarto preview` or open R in the terminal to test your R code line by line.
+3. Make sure all necessary packages (`library(tidyverse)`) are loaded at the top of your code chunk or post.
 
-### Issue: "quarto: command not found"
-
+### Q: My changes aren't showing up on my live GitHub Pages site
 **Solution:**
-- Make sure you're in a Codespace, not working locally
-- Try closing and reopening the terminal
-- Restart the Codespace if needed
+1. Did you run `quarto render` before committing? (Check that files inside `docs/` have updated timestamps).
+2. Did you stage and push everything? (`git add .`, `git commit -m "update"`, `git push origin main`).
+3. Allow 2–3 minutes for GitHub Pages to deploy, then do a hard refresh in your browser (`Cmd + Shift + R` on Mac, `Ctrl + F5` on Windows).
 
-### Issue: Preview doesn't work
-
-**Solution:**
-- Make sure you ran `quarto preview` in the terminal
-- Check that port 4200 or similar is forwarded (Codespaces does this automatically)
-- Try clicking the popup that says "Open in Browser"
-
-### Issue: Code blocks aren't rendering properly
-
-**Solution:**
-- Check your YAML header in the code block
-- Make sure language is specified: ` ```{python}` or ` ```{r}`
-- Verify indentation is correct
-
-### Issue: Blog posts aren't showing up
-
-**Solution:**
-- Make sure your post is in the `posts/` directory
-- Each post should be in its own folder with an `index.qmd` file
-- Check that your post has the required YAML frontmatter (title, author, date)
-- Run `quarto render` to rebuild the site
-
----
-
-## 📚 Additional Resources
-
-### Quarto Documentation
-- [Quarto Website Guide](https://quarto.org/docs/websites/)
-- [Quarto Publishing](https://quarto.org/docs/publishing/github-pages.html)
-- [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html)
-
-### Markdown Reference
-- [Quarto Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
-- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-
-### GitHub Help
-- [GitHub Pages Basics](https://docs.github.com/en/pages/getting-started-with-github-pages)
-- [Git Basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
-
----
-
-## 🎯 Assignment Requirements
-
-Make sure your portfolio includes:
-
-- [ ] Personalized home page with your information
-- [ ] Complete "About" page
-- [ ] Detailed resume with your education, skills, and experience
-- [ ] At least 3 blog posts documenting your work
-- [ ] Custom styling (feel free to modify `styles.css`)
-- [ ] Working GitHub Pages deployment
-- [ ] All placeholder text replaced with your actual content
-
----
-
-## 💡 Tips for Success
-
-1. **Start Early**: Don't wait until the last minute to set up your portfolio
-2. **Document as You Go**: Write blog posts as you complete projects
-3. **Make it Personal**: This is YOUR portfolio - make it reflect your interests
-4. **Keep it Professional**: Remember, future employers might see this
-5. **Update Regularly**: Add new projects and posts throughout the semester
-6. **Ask for Help**: Use office hours if you get stuck
-7. **Share Your Work**: Show your portfolio to classmates for feedback
-
----
-
-## 📞 Getting Help
-
-If you encounter issues:
-
-1. Check the [Troubleshooting](#troubleshooting) section above
-2. Review the [Quarto documentation](https://quarto.org/)
-3. Ask questions in class or office hours
-4. Post in the course discussion forum
-5. Email Dr. Poulsen
-
-Good luck with your portfolio! 🎓
+### Q: Need more help?
+- Review the **[Quarto Reference](QUARTO_REFERENCE.md)** or **[R Setup Guide](R_SETUP.md)**.
+- [Schedule Office Hours with Dr. Poulsen](https://outlook.office.com/bookwithme/user/f78874d353574c549378ea832faf2ae7@washcoll.edu?anonymous&ep=plink).

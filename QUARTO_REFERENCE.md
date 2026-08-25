@@ -1,170 +1,167 @@
-# Quarto Quick Reference
+# Quarto Quick Reference (Intro to Data Science)
 
-Quick reference for common Quarto commands and syntax.
+A quick reference cheatsheet for Quarto commands, markdown formatting, and R / tidyverse code execution.
 
-## 🔧 Terminal Commands
+---
 
-| Command | Description |
-|---------|-------------|
-| `quarto check` | Verify Quarto installation |
-| `quarto preview` | Preview your site locally |
-| `quarto render` | Build your website to `docs/` |
-| `quarto render file.qmd` | Render a single file |
-| `quarto --help` | Show all available commands |
+## 🔧 Essential Terminal Commands
 
-## 📝 YAML Frontmatter
+| Command | What it does |
+|---|---|
+| `quarto check` | Verifies your Quarto, R, and Knitr installation |
+| `quarto preview` | Launches a live local browser preview of your website |
+| `quarto render` | Builds your full website into the `docs/` directory |
+| `quarto render posts/my-post/index.qmd` | Renders an individual document to test for errors |
+| `quarto --help` | Displays help and options for any Quarto command |
 
-At the top of each `.qmd` file:
+---
+
+## 📝 YAML Frontmatter Example
+
+At the very top of each `.qmd` file:
 
 ```yaml
 ---
-title: "Your Title"
+title: "Exploring Data with ggplot2"
 author: "Your Name"
-date: "2026-01-15"
-categories: [tag1, tag2]
-format: html
+date: "2026-02-15"
+categories: [R, tidyverse, visualization]
+image: "image.jpg"
+draft: false
+format:
+  html:
+    toc: true
+    code-fold: false
 ---
 ```
+
+---
+
+## 💻 R Code Chunks with Tidyverse
+
+### Basic R Chunk with `ggplot2`
+````markdown
+```{{r}}
+#| label: fig-mpg-plot
+#| echo: true
+#| warning: false
+#| message: false
+#| fig-cap: "Fuel efficiency vs engine displacement in cars"
+
+library(tidyverse)
+
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point(size = 3, alpha = 0.8) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Engine Size vs Highway MPG",
+    x = "Engine Displacement (L)",
+    y = "Highway MPG",
+    color = "Vehicle Class"
+  ) +
+  theme_minimal()
+```
+````
+
+### Data Wrangling with `dplyr` & Pipe (`|>`)
+````markdown
+```{{r}}
+#| label: tbl-summary
+#| echo: true
+
+mpg |>
+  group_by(class) |>
+  summarize(
+    mean_hwy = mean(hwy, na.rm = TRUE),
+    mean_cty = mean(cty, na.rm = TRUE),
+    n = n()
+  ) |>
+  arrange(desc(mean_hwy))
+```
+````
+
+---
+
+## ⚙️ R Code Chunk Options
+
+Place options inside the code block right at the top using `#|`:
+
+| Option | Values | Purpose |
+|---|---|---|
+| `#| echo: true / false` | `true`, `false` | Shows or hides the R source code in the output |
+| `#| eval: true / false` | `true`, `false` | Runs or skips executing the code chunk |
+| `#| warning: false` | `true`, `false` | Hides R warnings from the rendered page |
+| `#| message: false` | `true`, `false` | Hides R package startup messages |
+| `#| code-fold: true` | `true`, `false`, `show` | Makes code collapsible for readability |
+| `#| fig-cap: "..."` | string | Adds a figure caption |
+| `#| fig-width: 8` | number | Controls figure width in inches |
+| `#| fig-height: 5` | number | Controls figure height in inches |
+
+---
 
 ## ✍️ Markdown Basics
 
 ```markdown
-# Heading 1
-## Heading 2
-### Heading 3
+# Header 1
+## Header 2
+### Header 3
 
-**bold text**
-*italic text*
+**Bold text**
+*Italic text*
+~~Strikethrough~~
 
-[link text](https://example.com)
+[Link text](https://example.com)
+![Image caption](path/to/image.jpg)
 
-![image alt text](path/to/image.jpg)
-
-- Bullet point 1
-- Bullet point 2
+- Bullet point item
+  - Indented sub-bullet
 
 1. Numbered item 1
 2. Numbered item 2
-```
 
-## 💻 Code Blocks
-
-### Python
-````markdown
-```{{python}}
-#| echo: true
-#| eval: true
-
-import pandas as pd
-df = pd.read_csv("data.csv")
-print(df.head())
-```
-````
-
-### R
-````markdown
-```{{r}}
-#| echo: true
-#| eval: true
-
-library(ggplot2)
-ggplot(mtcars, aes(x=wt, y=mpg)) + 
-  geom_point()
-```
-````
-
-### Code Options
-
-| Option | Description | Values |
-|--------|-------------|--------|
-| `echo` | Show the code | `true`, `false` |
-| `eval` | Run the code | `true`, `false` |
-| `code-fold` | Collapsible code | `true`, `false` |
-| `warning` | Show warnings | `true`, `false` |
-| `message` | Show messages | `true`, `false` |
-
-Example:
-````markdown
-```{{python}}
-#| echo: true
-#| eval: false
-#| code-fold: true
-#| warning: false
-
-# Your code here
-```
-````
-
-## 📊 Figures
-
-```markdown
-![Caption text](path/to/image.jpg){width=50%}
-
-::: {#fig-label}
-![Caption](image.jpg)
-
-This is a figure with a caption and label.
-:::
-```
-
-## 📦 Callout Boxes
-
-```markdown
-::: {.callout-note}
-This is a note callout.
-:::
-
-::: {.callout-warning}
-This is a warning callout.
-:::
-
-::: {.callout-tip}
-This is a tip callout.
-:::
-
-::: {.callout-important}
-This is an important callout.
-:::
-```
-
-## 🔗 Cross-References
-
-```markdown
-See @fig-plot for the visualization.
-
-Check out [Section 2](section-id).
-```
-
-## 📐 Math (KaTeX)
-
-Inline math: `$E = mc^2$`
-
-Display math:
-```markdown
-$$
-f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-$$
-```
-
-## 🌐 Useful Links
-
-- [Full Quarto Documentation](https://quarto.org/docs/guide/)
-- [Markdown Guide](https://quarto.org/docs/authoring/markdown-basics.html)
-- [Code Blocks](https://quarto.org/docs/computations/execution-options.html)
-- [Figures](https://quarto.org/docs/authoring/figures.html)
-- [Website Options](https://quarto.org/docs/websites/)
-
-## 🆘 Getting Help
-
-```bash
-# Get help on any command
-quarto render --help
-quarto preview --help
-
-# Check Quarto version
-quarto --version
+> Blockquote for quotes or reflections.
 ```
 
 ---
 
-📖 **Tip**: Keep this file open as a reference while working on your posts!
+## 📦 Callout Blocks
+
+```markdown
+::: {.callout-note}
+This is a helpful note callout.
+:::
+
+::: {.callout-tip}
+## Helpful Tip
+Share an insight or shortcut you learned while coding!
+:::
+
+::: {.callout-warning}
+Watch out for NA values or column type mismatches!
+:::
+
+::: {.callout-important}
+Remember to render before pushing to GitHub.
+:::
+```
+
+---
+
+## 📐 Math Equations (LaTeX)
+
+Inline math: `$y = \beta_0 + \beta_1 x_1 + \epsilon$`
+
+Display equation:
+```markdown
+$$
+\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i
+$$
+```
+
+---
+
+## 🌐 Helpful Resources
+- [Quarto Official Documentation](https://quarto.org/docs/guide/)
+- [R for Data Science (2e)](https://r4ds.hadley.nz/)
+- [ggplot2 Reference](https://ggplot2.tidyverse.org/reference/)
+- [dplyr Reference](https://dplyr.tidyverse.org/reference/)

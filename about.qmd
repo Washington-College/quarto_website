@@ -4,22 +4,23 @@ title: "About Me"
 
 ## Hello!
 
-I'm a student at Washington College studying [Your Major]. This portfolio showcases my work in data science, ethics, and my practicum projects.
+I'm a student at Washington College studying [Your Major]. This portfolio documents my learning journey in **Intro to Data Science**, featuring hands-on projects, exploratory data analyses, and data visualizations using R and the tidyverse.
 
-## Interests
+## Academic & Data Science Interests
 
-- Data Science
-- Data Ethics
-- [Your specific interests]
+- Exploratory Data Analysis & Visualization (ggplot2)
+- Data Wrangling & Transformation (dplyr, tidyr)
+- Reproducible Research & Scientific Publishing (Quarto, R Markdown)
+- [Your specific interests, e.g., Sports Analytics, Environmental Data, Economics]
 
 ## Background
 
-[Write a brief paragraph about yourself, your background, your interest in data science, and what you hope to accomplish in your career.]
+[Write a brief paragraph about yourself, your academic background, what excites you about working with data, and what you hope to learn or achieve in Intro to Data Science.]
 
-## Contact
+## Connect With Me
 
-Feel free to reach out to me:
+Feel free to connect or reach out:
 
-- Email: [youremail@example.com](mailto:youremail@example.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- **Email:** [youremail@washcoll.edu](mailto:youremail@washcoll.edu)
+- **GitHub:** [@yourusername](https://github.com/yourusername)
+- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)

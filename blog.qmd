@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Data Science Blog"
 listing:
   contents: posts
   sort: "date desc"
@@ -11,4 +11,4 @@ page-layout: full
 title-block-banner: true
 ---
 
-Welcome to my blog! Here I share my thoughts on data science, ethics, and my practicum work.
+Welcome to my data science blog! Here I document my work as I "learn out loud"—sharing data explorations, problem-solving reflections, and visualizations built using R and the tidyverse for my Intro to Data Science portfolio.

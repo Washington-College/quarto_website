@@ -1,0 +1,37 @@
+/* Custom CSS styles for your portfolio */
+
+/* Custom color scheme */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+}
+
+/* Customize navbar */
+.navbar {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Customize headings */
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+/* Customize links */
+a {
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Add some spacing to sections */
+section {
+  margin-bottom: 2rem;
+}
+
+/* Style for code blocks */
+pre {
+  border-left: 3px solid var(--secondary-color);
+}

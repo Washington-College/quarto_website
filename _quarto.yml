@@ -1,10 +1,17 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - about.qmd
+    - resume.qmd
+    - blog.qmd
+    - "posts/*/*.qmd"
+    - "!templates/**"
 
 website:
   title: "My Portfolio"
-  description: "Data Ethics and Practicum Portfolio"
+  description: "Intro to Data Science Portfolio"
   navbar:
     left:
       - text: "Home"
