@@ -1,0 +1,10 @@
+{
+  "r.alwaysUseActiveTerminal": true,
+  "r.bracketedPaste": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
+  ],
+  "githubPullRequests.showInitialNotification": false
+}

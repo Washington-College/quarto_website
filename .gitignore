@@ -10,21 +10,12 @@
 *.Rproj
 renv/
 
-# Python files (if any scratch)
-__pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-
 # OS files
 .DS_Store
 Thumbs.db
 
 # Editor files
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
-
-/.quarto/
-**/*.quarto_ipynb
