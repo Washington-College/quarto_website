@@ -4,7 +4,7 @@ Welcome to your portfolio website for the Data Ethics and Practicum class!
 
 ## 🚀 Getting Started
 
-1. **Accept the assignment** through the GitHub Classroom link
+1. **Accept the assignment** through the Classmoji link
 2. **Open in Codespaces**: Click the green "Code" button → Codespaces → Create
 3. **Follow the [Student Guide](STUDENT_GUIDE.md)** for complete setup instructions
 
